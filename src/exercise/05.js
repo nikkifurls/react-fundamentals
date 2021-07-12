@@ -14,15 +14,18 @@ import '../box-styles.css'
 // matches what the text says it should be as well as `fontStyle: 'italic'`
 const smallBox = <div className="box box--small" style={{
   marginTop: 20,
-  backgroundColor: 'lightblue'
+  backgroundColor: 'lightblue',
+  fontStyle: 'italic'
 }}>small lightblue box</div>
 const mediumBox = <div className="box box--medium" style={{
   marginTop: 20,
-  backgroundColor: 'pink'
+  backgroundColor: 'pink',
+  fontStyle: 'italic'
 }}>medium pink box</div>
 const largeBox = <div className="box box--large" style={{
   marginTop: 20,
-  backgroundColor: 'orange'
+  backgroundColor: 'orange',
+  fontStyle: 'italic'
 }}>large orange box</div>
 
 function App() {
