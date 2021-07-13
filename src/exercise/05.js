@@ -4,9 +4,15 @@
 import * as React from 'react'
 import '../box-styles.css'
 
-const Box = ({className, style, children}) => {
+const Box = ({size, style, children}) => {
+  const classes = `box box--${size}`;
+  const styles = {
+    ...style,
+    fontStyle: 'italic'
+  };
+
   return (
-    <div className={className} style={style}>
+    <div className={classes} style={styles}>
       {children}
     </div>
   );
@@ -15,13 +21,13 @@ const Box = ({className, style, children}) => {
 function App() {
   return (
     <div>
-      <Box className="box box--small" style={{backgroundColor: 'lightblue'}}>
+      <Box size="small" style={{backgroundColor: 'lightblue'}}>
         small lightblue box
       </Box>
-      <Box className="box box--medium" style={{backgroundColor: 'pink'}}>
+      <Box size="medium" style={{backgroundColor: 'pink'}}>
         medium pink box
       </Box>
-      <Box className="box box--large" style={{backgroundColor: 'orange'}}>
+      <Box size="large" style={{backgroundColor: 'orange'}}>
         large orange box
       </Box>
     </div>
