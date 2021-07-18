@@ -1,8 +1,7 @@
 // Basic Forms
 // http://localhost:3000/isolated/exercise/06.js
 
-import * as React from 'react'
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 
 function UsernameForm({onSubmitUsername}) {
   const usernameRef = useRef(null);
