@@ -1,10 +1,11 @@
 // Basic Forms
 // http://localhost:3000/isolated/exercise/06.js
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 function UsernameForm({onSubmitUsername}) {
   const usernameRef = useRef(null);
+  const [ error, setError ] = useState();
 
   function handleSubmit(event) {
     event.preventDefault();
