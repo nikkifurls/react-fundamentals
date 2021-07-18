@@ -25,6 +25,7 @@ function UsernameForm({onSubmitUsername}) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className="alert" role="alert">{error}</div>
       <div>
         <label htmlFor="username">Username:</label>
         <input id="username" ref={usernameRef} type="text" onChange={handleChange} />
