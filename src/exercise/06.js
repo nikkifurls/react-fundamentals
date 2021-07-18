@@ -13,11 +13,21 @@ function UsernameForm({onSubmitUsername}) {
     onSubmitUsername(username);
   }
 
+  // If value is not lowercase, show error
+  function handleChange(event) {
+    // Get the value
+    const username = event.target.value;
+    if (username !== username.toLowerCase()) {
+      // Update error state
+      setError('Username must be lower case');
+    }
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="username">Username:</label>
-        <input id="username" ref={usernameRef} type="text" />
+        <input id="username" ref={usernameRef} type="text" onChange={handleChange} />
       </div>
       <button type="submit">Submit</button>
     </form>
