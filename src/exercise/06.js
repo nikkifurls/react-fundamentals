@@ -29,7 +29,7 @@ function UsernameForm({onSubmitUsername}) {
         <label htmlFor="username">Username:</label>
         <input id="username" ref={usernameRef} type="text" onChange={handleChange} />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" disabled={error ? true : false}>Submit</button>
     </form>
   )
 }
